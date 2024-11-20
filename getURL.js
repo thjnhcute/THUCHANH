@@ -1,10 +1,11 @@
 import url from 'url';
 
-export const getPath = (req) => {
+ const getPath = (req) => {
     return req.url;
 }
 
-export const getParamsURL = (req) =>{
+ const getParamsURL = (req) =>{
     let urlData = url.parse(req.url, true);
     return JSON.stringify(urlData.query);
 }
+export default {getPath,getParamsURL}
